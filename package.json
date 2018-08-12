@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "parcel": "^1.9.7",
+    "phaser": "^3.11.0",
+    "typescript": "^3.0.1"
+  },
+  "name": "Phaser3-Typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
