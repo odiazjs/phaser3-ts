@@ -1,7 +1,8 @@
 import * as Phaser from 'phaser'
+import Player from './objects/player';
 
 export class BootScene extends Phaser.Scene {
-    private playerOne: any;
+    private playerOne: Player;
     constructor() {
         super({
             key: "BootScene"
@@ -13,12 +14,11 @@ export class BootScene extends Phaser.Scene {
     }
 
     create() {
-        this.playerOne = <Phaser.GameObjects.Graphics> this.add.graphics({
-            x: 100,
-            y: 100,
-            fillStyle: { color: 0x235845, alpha: 1 }
-        })
-        this.playerOne.fillRectShape(new Phaser.Geom.Rectangle(152, 105, 20, 20))
+        const player = this.physics.add.staticGroup();
+        player.create(25, 25, 'player');
+        
+        this.playerOne = new Player(this, this.sys.canvas.width, this.sys.canvas.height);
+        this.physics.world.enable(this.playerOne.graphics, 0);
     }
 
     update() {
