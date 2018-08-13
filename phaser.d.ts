@@ -9869,7 +9869,7 @@ declare namespace Phaser {
             /**
              * If this Game Object is enabled for physics then this property will contain a reference to a Physics Body.
              */
-            body:  Phaser.Physics.Arcade.Body | Phaser.Physics.Impact.Body;
+            body:  Phaser.Physics.Arcade.Body
 
             /**
              * This Game Object will ignore all calls made to its destroy method if this flag is set to `true`.
@@ -40699,7 +40699,7 @@ declare namespace Phaser {
                 /**
                  * [description]
                  */
-                body: Phaser.Physics.Impact.Body;
+                body: Phaser.Physics.Arcade.Body;
 
                 /**
                  * [description]
@@ -41821,7 +41821,7 @@ declare namespace Phaser {
                 /**
                  * [description]
                  */
-                body: Phaser.Physics.Impact.Body;
+                body: Phaser.Physics.Arcade.Body;
 
                 /**
                  * [description]

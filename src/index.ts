@@ -1,6 +1,9 @@
 import { AUTO } from 'phaser'
 import { BootScene } from './scene'
 
+declare var require: any;
+require('./assets/player.png')
+
 declare var module: any;
 
 if (module.hot) {
@@ -16,15 +19,15 @@ if (module.hot) {
 const config: GameConfig = {
     type: AUTO,
     parent: "ts-example",
-    width: 600,
-    height: 400,
+    width: 800,
+    height: 600,
     backgroundColor: 'rgb(243,243,243)',
     zoom: 1,
     physics: {
         default: "arcade",
         arcade: {
-            gravity: { y: 100 },
-            debug: true
+            gravity: { y: 0 },
+            debug: false
         }
     },
     scene: BootScene
