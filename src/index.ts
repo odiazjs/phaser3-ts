@@ -19,15 +19,15 @@ if (module.hot) {
 const config: GameConfig = {
     type: AUTO,
     parent: "ts-example",
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 800,
     backgroundColor: 'rgb(243,243,243)',
     zoom: 1,
     physics: {
         default: "arcade",
         arcade: {
             gravity: { y: 0 },
-            debug: false
+            debug: true
         }
     },
     scene: BootScene
